@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>发布订阅实现</title>
+	</head>
+	<body>
+		<div class="container">
+			<button class="submit">点击</button>
+		</div>
+		<script src="./subscribe.js"></script>
+		<script>
+			const btn = document.querySelector(".submit");
+			const pool = new Subscribe();
+			const fn1 = () => {
+				console.log(1);
+			};
+			const fn2 = () => {
+				console.log(2);
+        pool.remove(fn1)
+			};
+			const fn3 = () => {
+				console.log(3);
+			};
+			const fn4 = () => {
+				console.log(4);
+			};
+      pool.add(fn1)
+      pool.add(fn2)
+      pool.add(fn3)
+      pool.add(fn4)
+			btn.onclick = function (event) {
+				pool.fire();
+        console.log(pool)
+			};
+		</script>
+	</body>
+</html>
