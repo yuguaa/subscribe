@@ -1,0 +1,16 @@
+{
+  "name": "yuguaa-subscribe-monorepo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm dev:vanilla",
+    "dev:vanilla": "pnpm --filter vanilla dev",
+    "dev:subscribe": "pnpm --filter @yugu/subscribe dev",
+    "build": "pnpm --filter @yugu/subscribe build",
+    "release": "pnpm --filter @yugu/subscribe release"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,40 @@
+{
+  "name": "@yugu/subscribe",
+  "version": "1.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.mjs",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "release": "pnpm build && pnpm publish --access public"
+  },
+  "keywords": [
+    "发布订阅",
+    "subscribe",
+    "pubsub"
+  ],
+  "homepage": "https://github.com/yuguaa/yuguaa-subscribe",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuguaa/yuguaa-subscribe"
+  },
+  "author": "yuguaa",
+  "license": "ISC",
+  "devDependencies": {
+    "bumpp": "^8.2.1",
+    "tsup": "^6.6.0",
+    "typescript": "^4.9.5"
+  }
+}

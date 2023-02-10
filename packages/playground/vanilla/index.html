@@ -10,8 +10,9 @@
 		<div class="container">
 			<button class="submit">点击</button>
 		</div>
-		<script src="./subscribe.js"></script>
-		<script>
+		<script type="module">
+			import Subscribe from "@yugu/subscribe";
+			console.log('🛑yuguaa: ~ Subscribe', Subscribe)
 			const btn = document.querySelector(".submit");
 			const pool = new Subscribe();
 			const fn1 = () => {
@@ -19,7 +20,7 @@
 			};
 			const fn2 = () => {
 				console.log(2);
-        pool.remove(fn1)
+				pool.remove(fn1);
 			};
 			const fn3 = () => {
 				console.log(3);
@@ -27,13 +28,13 @@
 			const fn4 = () => {
 				console.log(4);
 			};
-      pool.add(fn1)
-      pool.add(fn2)
-      pool.add(fn3)
-      pool.add(fn4)
+			pool.add(fn1);
+			pool.add(fn2);
+			pool.add(fn3);
+			pool.add(fn4);
 			btn.onclick = function (event) {
 				pool.fire();
-        console.log(pool)
+				console.log(pool);
 			};
 		</script>
 	</body>

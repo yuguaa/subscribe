@@ -56,3 +56,4 @@ class Subscribe {
 		}
 	}
 }
+export default Subscribe;
